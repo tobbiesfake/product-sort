@@ -119,6 +119,10 @@ function Content() {
 }
 
 function Product({ props }) {
+
+  // const handle
+
+
   return (
     <div className="product">
       <h5 className="product-tag">
@@ -131,8 +135,8 @@ function Product({ props }) {
         {props.category.charAt(0).toUpperCase()}
         {props.category.slice(1)}
       </h5>
-      <h1 className="product-title">{props.title}</h1>
-      <p className="product-description">{props.description}</p>
+      <h1 title={props.title} className="product-title">{props.title}</h1>
+      <p title={props.description} className="product-description">{props.description}</p>
       <h1 className="product-price"><span>$</span>{props.price}</h1>
       <div className="product-rating">
         <div className="cover" style={{width: `calc(${( (5 - props.rating.rate) / 5 * 100) * (100/104)}% + 2px)`}}></div>
